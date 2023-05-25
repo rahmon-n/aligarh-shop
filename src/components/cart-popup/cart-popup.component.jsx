@@ -10,7 +10,7 @@ import {
   selectIsCartOpen
 } from '../../features/cart/cart.selector';
 
-import { useClickOutside } from '../../utils/clickOutSideHook';
+import { useClickOutside } from '../../utils/useClickOutSide';
 
 import {
   CartPopupContainer,

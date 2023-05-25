@@ -20,7 +20,7 @@ const CategoryPreview = ({ title, products }) => {
             <ProductCard key={product.id} product={product} />
           ))}
       </Preview>
-      <StyledLink to={title}>See the whole category &#8594; </StyledLink>
+      <StyledLink to={title}>View the entire category &#8594; </StyledLink>
     </CategoryPreviewContainer>
   );
 };

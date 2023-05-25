@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const CheckoutContainer = styled.div`
-  .checkout .total-sum {
+  width: 100%;
+
+  .total-sum {
     margin-bottom: 5px;
-    font-size: 18px;
-  }
-  .checkout .total-sum strong {
-    font-size: 22px;
+    font-size: 30px;
   }
 `;

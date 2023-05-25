@@ -21,10 +21,6 @@ export const List = styled.ul`
     li {
       flex-shrink: 0;
       margin: 0 20px;
-
-      a {
-        line-height: 3em;
-      }
     }
   }
 `;

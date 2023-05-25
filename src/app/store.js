@@ -1,10 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import categoriesReducer from '../features/categories/categoriesSlice';
-import cartReducer from '../features/cart/cartSlice';
-import userReducer from '../features/user/userSlice';
+import { persistedReducer } from './reducers';
+import persistStore from 'redux-persist/es/persistStore';
 
 export const store = configureStore({
-  reducer: { categoriesReducer, cartReducer, userReducer },
+  reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ serializableCheck: false })
 });
+
+export const persistor = persistStore(store);

@@ -16,7 +16,6 @@ const getSnapshotFromUserAuth = async (userAuth, additionalDetails) => {
     );
 
     if (userSnapshot) {
-      console.log(userSnapshot);
       return { id: userSnapshot.id, ...userSnapshot.data() };
     }
   } catch (error) {
@@ -135,5 +134,4 @@ export const {
   signOutFailed
 } = userSlice.actions;
 
-export const selectCurrentUser = (state) => state.userReducer;
 export default userSlice.reducer;

@@ -1,6 +1,10 @@
 import styled from 'styled-components';
+import { SpinnerContainer } from '../spinner/spinner.styles';
 
 export const BaseButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 12px 18px;
   border: none;
   color: #fff;
@@ -12,6 +16,10 @@ export const BaseButton = styled.button`
 
   &:hover {
     background-color: #f6b71a;
+  }
+
+  &:disabled {
+    padding: 5px 36px;
   }
 
   @media screen and (max-width: 360px) {
@@ -35,4 +43,9 @@ export const RoundedButton = styled(BaseButton)`
   @media screen and (max-width: 375px) {
     margin-top: 20px;
   }
+`;
+
+export const ButtonSpinner = styled(SpinnerContainer)`
+  width: 30px;
+  height: 30px;
 `;

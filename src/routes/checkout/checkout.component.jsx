@@ -1,10 +1,13 @@
 import { useSelector } from 'react-redux';
-import { selectCartItems, selectCartTotal } from '../../features/cart/cart.selector';
+import {
+  selectCartItems,
+  selectCartTotal
+} from '../../features/cart/cart.selector';
 
 import CartItem from '../../components/cart-item/cart-item.component';
 import Layout from '../../components/layout/layout.component';
 import { CheckoutContainer } from './checkout.styles';
-import Button from '../../components/button/button.component';
+import PaymentForm from '../../components/payment-form/payment-form.component';
 
 const Checkout = () => {
   const cartItems = useSelector(selectCartItems);
@@ -23,7 +26,7 @@ const Checkout = () => {
               <div className='total-sum'>
                 Total: <strong>{cartTotal}$</strong>
               </div>
-              <Button>making an order</Button>
+              <PaymentForm />
             </div>
           </>
         ) : (

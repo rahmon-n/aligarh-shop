@@ -1,6 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
+import { signOutStart } from '../../features/user/userSlice';
+import { selectCurrentUser } from '../../features/user/user.selector';
+
 import { List, NavLink, RowList } from './nav-list.styles';
-import { selectCurrentUser, signOutStart } from '../../features/user/userSlice';
+
 import { links } from '../../utils/consts';
 
 export const LIST_DIRECTIONS = {
@@ -16,7 +19,7 @@ const getList = (direction = LIST_DIRECTIONS.column) =>
 
 const NavList = ({ direction }) => {
   const dispatch = useDispatch();
-  const { currentUser } = useSelector(selectCurrentUser);
+  const currentUser = useSelector(selectCurrentUser);
   const CustomList = getList(direction);
 
   const signOutHandler = () => {
