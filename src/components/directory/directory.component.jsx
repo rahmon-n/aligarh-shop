@@ -1,8 +1,5 @@
-import { useEffect } from 'react';
 import DirectoryItem from '../directory-item/directory-item.component';
 import { DirectoryContainer } from './directory.styles';
-import { addCollectionAndDocuments } from '../../utils/firebase/firebase.utils';
-import SHOP_DATA from '../../shop-data';
 
 const categories = [
   {
@@ -40,10 +37,6 @@ const categories = [
 ];
 
 const Directory = () => {
-  useEffect(() => {
-    addCollectionAndDocuments('categories', SHOP_DATA);
-  });
-
   return (
     <DirectoryContainer>
       {categories.map(({ id, ...otherProps }) => (

@@ -10,7 +10,7 @@ export const CategoryContainer = styled.div`
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: 428px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
